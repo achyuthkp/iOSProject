@@ -35,9 +35,17 @@
                             </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KI3-Wj-YTM">
                                 <rect key="frame" x="11" y="135" width="350" height="146"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="G3b-Nx-OGN"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="W97-CX-CFK"/>
+                                </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ovX-Ih-59q">
                                 <rect key="frame" x="11" y="299" width="350" height="146"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fEo-I2-iJM"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9zU-oK-vsC"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -14,8 +14,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtfield1;
 @property (weak, nonatomic) IBOutlet UIPickerView *picktype;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickwhich;
-@property (nonatomic) NSArray *measureArray;
+@property (nonatomic) NSArray *lengthArray;
+@property (nonatomic) NSArray *areaArray;
+@property (nonatomic) NSArray *tempArray;
 @property (nonatomic) NSString *type;
+@property (nonatomic) NSString *measure;
 @property (nonatomic) NSArray *stringArray;
 @end
 
