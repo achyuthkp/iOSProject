@@ -12,7 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UITextField *txtfield1;
-@property (weak, nonatomic) IBOutlet UIPickerView *pickme;
+@property (weak, nonatomic) IBOutlet UIPickerView *picktype;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickwhich;
+@property (nonatomic) NSArray *measureArray;
+@property (nonatomic) NSString *type;
 @property (nonatomic) NSArray *stringArray;
 @end
 

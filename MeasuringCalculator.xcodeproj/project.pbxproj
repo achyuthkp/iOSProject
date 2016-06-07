@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C642E081D019D760083810B /* launchimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C642E071D019D760083810B /* launchimage.jpg */; };
 		4CA533131CECD37B00832A5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA533121CECD37B00832A5C /* main.m */; };
 		4CA533161CECD37B00832A5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA533151CECD37B00832A5C /* AppDelegate.m */; };
 		4CA533191CECD37B00832A5C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA533181CECD37B00832A5C /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C642E071D019D760083810B /* launchimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = launchimage.jpg; path = ../../launchimage.jpg; sourceTree = "<group>"; };
 		4CA5330E1CECD37B00832A5C /* MeasuringCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeasuringCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA533121CECD37B00832A5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CA533141CECD37B00832A5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		4CA533101CECD37B00832A5C /* MeasuringCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				4C642E071D019D760083810B /* launchimage.jpg */,
 				4CA533141CECD37B00832A5C /* AppDelegate.h */,
 				4CA533151CECD37B00832A5C /* AppDelegate.m */,
 				4CA533171CECD37B00832A5C /* ViewController.h */,
@@ -136,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C642E081D019D760083810B /* launchimage.jpg in Resources */,
 				4CA533211CECD37B00832A5C /* LaunchScreen.storyboard in Resources */,
 				4CA5331E1CECD37B00832A5C /* Assets.xcassets in Resources */,
 				4CA5331C1CECD37B00832A5C /* Main.storyboard in Resources */,
@@ -298,6 +302,7 @@
 				4CA533271CECD37B00832A5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
