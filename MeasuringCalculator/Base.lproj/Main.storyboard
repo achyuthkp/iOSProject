@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7K-ze-gT0">
-                                <rect key="frame" x="169" y="97" width="34" height="30"/>
+                                <rect key="frame" x="110" y="392" width="34" height="30"/>
                                 <state key="normal" title="Click"/>
                                 <connections>
                                     <action selector="button1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tp2-XJ-fHX"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQw-RV-yuo">
-                                <rect key="frame" x="138" y="59" width="97" height="30"/>
+                                <rect key="frame" x="138" y="28" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -34,19 +34,31 @@
                                 </connections>
                             </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KI3-Wj-YTM">
-                                <rect key="frame" x="11" y="135" width="350" height="146"/>
+                                <rect key="frame" x="11" y="66" width="350" height="146"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="G3b-Nx-OGN"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="W97-CX-CFK"/>
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ovX-Ih-59q">
-                                <rect key="frame" x="11" y="299" width="350" height="146"/>
+                                <rect key="frame" x="11" y="227" width="350" height="146"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="fEo-I2-iJM"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="9zU-oK-vsC"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3H-A6-V4M">
+                                <rect key="frame" x="31" y="37" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddp-84-ell">
+                                <rect key="frame" x="219" y="396" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -54,6 +66,7 @@
                         <outlet property="button1" destination="t7K-ze-gT0" id="Wdn-pO-zQn"/>
                         <outlet property="picktype" destination="KI3-Wj-YTM" id="HEy-oD-J2F"/>
                         <outlet property="pickwhich" destination="ovX-Ih-59q" id="Dub-aN-TFo"/>
+                        <outlet property="resultLabel" destination="ddp-84-ell" id="yqW-7U-SPY"/>
                         <outlet property="txtfield1" destination="vQw-RV-yuo" id="5UM-tI-w3n"/>
                     </connections>
                 </viewController>

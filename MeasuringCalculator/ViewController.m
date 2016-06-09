@@ -7,10 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "calculationConvertor.h"
 
 
 @interface ViewController ()
-
+@property (nonatomic) calculationConvertor* calc;
 @end
 
 @implementation ViewController
@@ -27,15 +28,17 @@
     self.pickwhich.tag = 2;
     // Do any additional setup after loading the view, typically from a nib.
     self.stringArray = @[@"Length", @"Temperature", @"Area" ];
-    self.areaArray = @[@"Kilometer Sq", @"Meter Sq", @"Foot Sq"];
     self.lengthArray = @[@"Meter", @"Kilometer", @"Mile", @"Foot"];
     self.tempArray = @[@"Celsius", @"Kelvin", @"Farenheit"];
+    self.areaArray = @[@"Kilometer Sq", @"Meter Sq", @"Foot Sq"];
+    self.calc = [[calculationConvertor alloc] init];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)button1:(UIButton *)sender {
+    self.resultLabel = [self.calc convertLength];
 }
 - (IBAction)txtfield1:(UITextField *)sender {
 
