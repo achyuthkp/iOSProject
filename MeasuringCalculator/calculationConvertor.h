@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface calculationConvertor : NSObject
--(double) convertLength:(NSString*)length1 :(NSString*)length2 :(double)val;
+-(double) convertLength:(double)length1 :(double)length2 :(double)val;
 -(double) convertArea:(NSString*)area1 :(NSString*)area2 :(double)val;
 -(double) convertTemp:(NSString*)temp1 :(NSString*)temp2 :(double)val;
 @end

@@ -10,19 +10,19 @@
 #import <math.h>
 
 @implementation calculationConvertor
--(double) convertLength:(NSString *)length1 :(NSString *)length2 :(double)val
+-(double) convertLength:(double)length1 :(double)length2 :(double)val
 {
-    if ([length1 isEqualToString:@"Meter"])
+    if (length1==0)
     {
-        if ([length2 isEqualToString:@"Kilometer"])
+        if (length2==1)
         {
             return val*0.001;
         }
-        else if ([length2 isEqualToString:@"Mile"])
+        else if (length2==2)
         {
             return val*0.000621371;
         }
-        else if ([length2 isEqualToString:@"Foot"])
+        else if (length2==3)
         {
             return val*3.28084;
         }
@@ -31,17 +31,17 @@
             return val;
         }
     }
-    else if([length1 isEqualToString:@"Kilometer"])
+    else if(length1==1)
     {
-        if ([length2 isEqualToString:@"Meter"])
+        if (length2==0)
         {
             return val*1000;
         }
-        else if ([length2 isEqualToString:@"Mile"])
+        else if (length2==2)
         {
             return val*0.621371;
         }
-        else if ([length2 isEqualToString:@"Foot"])
+        else if (length2==3)
         {
             return val*3280.84;
         }
@@ -51,17 +51,17 @@
         }
 
     }
-    else if ([length1 isEqualToString:@"Mile"])
+    else if (length1==2)
     {
-        if ([length2 isEqualToString:@"Meter"])
+        if (length2==0)
         {
             return val*1609.34;
         }
-        else if ([length2 isEqualToString:@"Kilometer"])
+        else if (length2==1)
         {
             return val*1.60934;
         }
-        else if ([length2 isEqualToString:@"Foot"])
+        else if (length2==3)
         {
             return val*5280;
         }
@@ -70,17 +70,17 @@
             return val;
         }
     }
-    else if ([length1 isEqualToString:@"Foot"])
+    else if (length1==3)
     {
-        if ([length2 isEqualToString:@"Meter"])
+        if (length2==0)
         {
             return val*0.3048;
         }
-        else if ([length2 isEqualToString:@"Kilometer"])
+        else if (length2==1)
         {
             return val*0.0003048;
         }
-        else if ([length2 isEqualToString:@"Mile"])
+        else if (length2==2)
         {
             return val*0.000189394;
         }

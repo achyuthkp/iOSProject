@@ -12,10 +12,12 @@
 
 @interface ViewController ()
 @property (nonatomic) calculationConvertor* calc;
+
 @end
 
 @implementation ViewController
 
+double type,originalType,ResultType,txt;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,13 +34,17 @@
     self.tempArray = @[@"Celsius", @"Kelvin", @"Farenheit"];
     self.areaArray = @[@"Kilometer Sq", @"Meter Sq", @"Foot Sq"];
     self.calc = [[calculationConvertor alloc] init];
-}
+    }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)button1:(UIButton *)sender {
-    self.resultLabel = [self.calc convertLength];
+//    if (<#condition#>) {
+//        <#statements#>
+//    }
+    
+    self.resultLabel.text = [NSString stringWithFormat:@"%f",[self.calc convertLength:originalType :ResultType :txt]];
 }
 - (IBAction)txtfield1:(UITextField *)sender {
 
@@ -46,8 +52,12 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.txtfield1 becomeFirstResponder];
-    
-    NSLog(@"%@",textField);
+    txt = [textField.text doubleValue];
+    NSLog(@"%f",txt);
+    if (txt == 0) {
+     self.resultLabel.textColor = [UIColor redColor];
+     self.resultLabel.text = @"Enter a Value!!";
+    }
     [self.txtfield1 resignFirstResponder];
     return false;
 }
@@ -70,10 +80,16 @@
     return [data count];
 }
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-
     if ([pickerView isEqual:self.picktype]) {
         [self.pickwhich reloadAllComponents];
     }
+    type = [self.picktype selectedRowInComponent:0];
+    originalType = [self.pickwhich selectedRowInComponent:0];
+    ResultType = [self.pickwhich selectedRowInComponent:1];
+    NSLog(@"%ld",[self.picktype selectedRowInComponent:0]);
+    NSLog(@"%ld",[self.pickwhich selectedRowInComponent:0]);
+    NSLog(@"%ld",[self.pickwhich selectedRowInComponent:1]);
+    
 }
 -(NSArray*) readContentFromPicker:(UIPickerView *)pickerView
 {
@@ -101,6 +117,7 @@
 //    NSLog(@"%@",self.stringArray[row]);
 
     NSArray* data = [self readContentFromPicker:pickerView];
+    
     return [data objectAtIndex:row];
     
 }
