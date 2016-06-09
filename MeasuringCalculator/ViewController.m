@@ -43,9 +43,19 @@ double type,originalType,ResultType,txt;
 //    if (<#condition#>) {
 //        <#statements#>
 //    }
-    
-    self.resultLabel.text = [NSString stringWithFormat:@"%f",[self.calc convertLength:originalType :ResultType :txt]];
-}
+    if (type == 0)
+    { // Length
+        self.resultLabel.text = [NSString stringWithFormat:@"%f",[self.calc convertLength:originalType :ResultType :txt]];
+    }
+    else if (type == 1)
+    { // Temperature
+        self.resultLabel.text = [NSString stringWithFormat:@"%f",[self.calc convertTemp:originalType :ResultType :txt]];
+    }
+    else if (type == 2)
+    { // Area 
+        self.resultLabel.text = [NSString stringWithFormat:@"%f",[self.calc convertArea:originalType :ResultType :txt]];
+    }
+    }
 - (IBAction)txtfield1:(UITextField *)sender {
 
 }
@@ -54,7 +64,7 @@ double type,originalType,ResultType,txt;
     [self.txtfield1 becomeFirstResponder];
     txt = [textField.text doubleValue];
     NSLog(@"%f",txt);
-    if (txt == 0) {
+    if (txt == 0.000) {
      self.resultLabel.textColor = [UIColor redColor];
      self.resultLabel.text = @"Enter a Value!!";
     }

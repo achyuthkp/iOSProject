@@ -10,6 +10,6 @@
 
 @interface calculationConvertor : NSObject
 -(double) convertLength:(double)length1 :(double)length2 :(double)val;
--(double) convertArea:(NSString*)area1 :(NSString*)area2 :(double)val;
--(double) convertTemp:(NSString*)temp1 :(NSString*)temp2 :(double)val;
+-(double) convertArea:(double)area1 :(double)area2 :(double)val;
+-(double) convertTemp:(double)temp1 :(double)temp2 :(double)val;
 @end
