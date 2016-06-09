@@ -148,5 +148,58 @@
     }
 
 }
+-(double) convertTemp:(NSString *)temp1 :(NSString *)temp2 :(double)val
+{
+    if ([temp1 isEqualToString:@"Celsius"])
+    {
+        if ([temp2 isEqualToString:@"Kelvin"])
+        {
+            return val+273.15;
+        }
+        else if ([temp2 isEqualToString:@"Farenheit"])
+        {
+            return val+32;
+        }
+        else
+        {
+            return val;
+        }
+    }
+    else if ([temp1 isEqualToString:@"Kelvin"])
+    {
+        if ([temp2 isEqualToString:@"Celsius"])
+        {
+            return val-273.15;
+        }
+        else if ([temp2 isEqualToString:@"Farenheit"])
+        {
+            return val-459.67;
+        }
+        else
+        {
+            return val;
+        }
+    }
+    else if ([temp1 isEqualToString:@"Farenheit"])
+    {
+        if ([temp2 isEqualToString:@"Kelvin"])
+        {
+            return val+255.372;
+        }
+        else if ([temp2 isEqualToString:@"Celsius"])
+        {
+            return val-17.7778;
+        }
+        else
+        {
+            return val;
+        }
+    }
+    else
+    {
+        return val;
+    }
+
+}
 @end
 
