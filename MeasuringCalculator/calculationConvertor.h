@@ -10,4 +10,5 @@
 
 @interface calculationConvertor : NSObject
 -(double) convertLength:(NSString*)length1 :(NSString*)length2 :(double)val;
+-(double) convertArea:(NSString*)area1 :(NSString*)area2 :(double)val;
 @end

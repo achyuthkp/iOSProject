@@ -7,11 +7,13 @@
 //
 
 #import "calculationConvertor.h"
+#import <math.h>
 
 @implementation calculationConvertor
-double len1, len2;
--(double) convertLength:(NSString *)length1 :(NSString *)length2 :(double)val{
-    if ([length1 isEqualToString:@"Meter"]) {
+-(double) convertLength:(NSString *)length1 :(NSString *)length2 :(double)val
+{
+    if ([length1 isEqualToString:@"Meter"])
+    {
         if ([length2 isEqualToString:@"Kilometer"])
         {
             return val*0.001;
@@ -92,6 +94,59 @@ double len1, len2;
     {
         return val;
     }
+}
+-(double) convertArea:(NSString *)area1 :(NSString *)area2 :(double)val
+{
+    if ([area1 isEqualToString:@"Kilometer Sq"])
+    {
+        if ([area2 isEqualToString:@"Meter Sq"])
+        {
+            return val*pow(10, 6);
+        }
+        else if ([area2 isEqualToString:@"Foot Sq"])
+        {
+            return val*10.76391041671*pow(10, 6);
+        }
+        else
+        {
+            return val;
+        }
+    }
+    else if ([area1 isEqualToString:@"Meter Sq"])
+    {
+        if ([area2 isEqualToString:@"Kilometer Sq"])
+        {
+            return val*pow(10,-6);
+        }
+        else if ([area2 isEqualToString:@"Foot Sq"])
+        {
+            return val*10.76391041671;
+        }
+        else
+        {
+            return val;
+        }
+    }
+    else if ([area1 isEqualToString:@"Foot Sq"])
+    {
+        if ([area2 isEqualToString:@"Kilometer Sq"])
+        {
+            return val*9.290304*pow(10, -8);
+        }
+        else if ([area2 isEqualToString:@"Meter Sq"])
+        {
+            return val*9.290304*pow(10, -2);
+        }
+        else
+        {
+            return val;
+        }
+    }
+        else
+    {
+        return val;
+    }
+
 }
 @end
 
