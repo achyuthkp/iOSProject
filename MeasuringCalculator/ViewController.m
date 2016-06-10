@@ -39,11 +39,9 @@ double type,originalType,ResultType,txt;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)button1:(UIButton *)sender {
-//    if (<#condition#>) {
-//        <#statements#>
-//    }
-    if (type == 0)
+- (IBAction)button1:(UIButton *)sender
+{
+   if (type == 0)
     { // Length
         self.resultLabel.text = [NSString stringWithFormat:@"%f",[self.calc convertLength:originalType :ResultType :txt]];
     }
@@ -56,7 +54,8 @@ double type,originalType,ResultType,txt;
         self.resultLabel.text = [NSString stringWithFormat:@"%f",[self.calc convertArea:originalType :ResultType :txt]];
     }
     }
-- (IBAction)txtfield1:(UITextField *)sender {
+- (IBAction)txtfield1:(UITextField *)sender
+{
 
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -64,10 +63,17 @@ double type,originalType,ResultType,txt;
     [self.txtfield1 becomeFirstResponder];
     txt = [textField.text doubleValue];
     NSLog(@"%f",txt);
-    if (txt == 0.000) {
+    if (txt == 0.000)
+    {
      self.resultLabel.textColor = [UIColor redColor];
-     self.resultLabel.text = @"Enter a Value!!";
+     self.resultLabel.text = @"Enter a proper value!!";
     }
+    else
+    {
+        self.resultLabel.textColor = [UIColor blueColor];
+        self.resultLabel.text = @"";
+    }
+        
     [self.txtfield1 resignFirstResponder];
     return false;
 }
@@ -84,22 +90,20 @@ double type,originalType,ResultType,txt;
     }
 }
 
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
 
     NSArray* data = [self readContentFromPicker:pickerView];
     return [data count];
 }
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
     if ([pickerView isEqual:self.picktype]) {
         [self.pickwhich reloadAllComponents];
     }
     type = [self.picktype selectedRowInComponent:0];
     originalType = [self.pickwhich selectedRowInComponent:0];
     ResultType = [self.pickwhich selectedRowInComponent:1];
-    NSLog(@"%ld",[self.picktype selectedRowInComponent:0]);
-    NSLog(@"%ld",[self.pickwhich selectedRowInComponent:0]);
-    NSLog(@"%ld",[self.pickwhich selectedRowInComponent:1]);
-    
 }
 -(NSArray*) readContentFromPicker:(UIPickerView *)pickerView
 {
@@ -123,9 +127,8 @@ double type,originalType,ResultType,txt;
     return data;
 }
 
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-//    NSLog(@"%@",self.stringArray[row]);
-
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
     NSArray* data = [self readContentFromPicker:pickerView];
     
     return [data objectAtIndex:row];

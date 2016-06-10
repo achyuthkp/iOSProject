@@ -11,7 +11,8 @@
 
 @implementation calculationConvertor
 -(double) convertLength:(double)length1 :(double)length2 :(double)val
-{
+{   // length1 - Original Type
+    // length2 - Type to be converted to
     // 0 - Meter
     // 1 - Kilometer
     // 2 - Mile
@@ -102,6 +103,8 @@
 
 -(double) convertTemp:(double)temp1 :(double)temp2 :(double)val
 {
+    // temp1 - Original Type
+    // temp2 - Type to be converted to
     // 0 - Celsius
     // 1 - Kelvin
     // 2 - Farenheit
@@ -159,6 +162,8 @@
 
 -(double) convertArea:(double)area1 :(double)area2 :(double)val
 {
+    // area1 - Original Type
+    // area2 - Type to be converted to
     // 0 - Kilometer Sq
     // 1 - Meter Sq
     // 2 - Foot Sq
